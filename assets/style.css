@@ -1,119 +1,141 @@
-/* ------------------------------------------------------
-   Modern Minimal Theme  —  AIML TR Dictionary (final)
-   ------------------------------------------------------ */
+/* =====================================================
+   AIML‑TR Dictionary • Slick Minimal 2025 Refresh
+   Author: ChatGPT / OpenAI  •  July 2025
+   ===================================================== */
 
-/* =========  CSS Custom Properties  ========= */
+/* ------------  Design Tokens  ------------ */
 :root {
-  /* brand */
-  --accent:       #eaffb2;        /* light-yellow */
-  --accent-light: #525166;        /* very pale blue for subtle tints */
+  /* colour system */
+  --clr-bg:          #f7f9fc;      /* page background */
+  --clr-surface:     #ffffff;      /* cards / surfaces */
+  --clr-text:        #1a1d23;      /* primary text */
+  --clr-meta:        #6b7280;      /* secondary text */
+  --clr-border:      #e5e7eb;      /* subtle borders */
+  --clr-accent:      #e7ffae;      /* brand blue (AA contrast) */
+  --clr-accent-dark: #004ed4;      /* hover / active */
 
-  /* greys & text */
-  --text:   #1f2937;  /* gray‑800 */
-  --bg:     #f9fafb;  /* gray‑50  */
-  --card-bg:#ffffff;  /* true white */
-  --meta:   #6b7280;  /* gray‑500 */
-
-  /* layout & motion */
-  --radius:   1rem;
-  --shadow:   0 10px 20px rgba(0,0,0,.04),
-              0  2px  6px rgba(0,0,0,.04);
-  --max-width:   68ch;
-  --line-height: 1.65;
-  --transition:  140ms cubic-bezier(.4,0,.2,1);
+  /* layout */
+  --radius:   .9rem;
+  --shadow:   0 3px 6px rgb(0 0 0 / .04),
+              0 1px 2px rgb(0 0 0 / .06);
+  --max-w:    72ch;
 }
 
-/* =========  Reset & Base  ========= */
+/* ------------  Reset & Base  ------------ */
 *, *::before, *::after { box-sizing: border-box; }
-
 html { font-size: 16px; scroll-behavior: smooth; }
 
 body {
-  margin: 0; background: var(--bg); color: var(--text);
+  margin: 0;
+  background: var(--clr-bg);
+  color: var(--clr-text);
   font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: var(--line-height);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* =========  Layout wrappers  ========= */
-header, footer, main {
-  width: min(100% - 2rem, var(--max-width));
-  margin-inline: auto;
-}
+/* ------------  Global Layout  ------------ */
+header, footer, main { width: min(100% - 2rem, var(--max-w)); margin-inline: auto; }
 
-header { padding-block: 2.5rem 1rem; text-align: center; }
-header h2 { margin: 0; font-size: 1.75rem; letter-spacing: -.02em; font-weight: 700; }
-header a { color: var(--text); text-decoration: none; }
+header {
+  padding-block: 3rem 1.25rem;
+  text-align: center;
+}
+header h2 { margin: 0; font-weight: 700; font-size: 1.9rem; letter-spacing: -.015em; }
+header a { color: var(--clr-text); text-decoration: none; }
 
 footer {
-  padding-block: 4rem 2rem; text-align: center;
-  font-size: .875rem; color: var(--meta);
+  padding-block: 5rem 2.5rem;
+  text-align: center;
+  font-size: .875rem;
+  color: var(--clr-meta);
 }
 
-/* =========  Links (global)  ========= */
-a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
-a:hover, a:focus-visible { color: color-mix(in srgb, var(--accent) 80%, black); }
+/* ------------  Links  ------------ */
+a {
+  color: var(--clr-accent);
+  text-decoration: none;
+  transition: color .15s ease;
+}
+a:hover, a:focus-visible { color: var(--clr-accent-dark); }
 
-/* =========  Dictionary Index  ========= */
+/* ------------  Index (list)  ------------ */
 #search {
-  width: 100%; padding: .9rem 1rem; font-size: 1rem;
-  border: 1px solid #d1d5db; /* gray‑300 */
-  border-radius: var(--radius); margin-bottom: 2rem;
+  width: 100%;
+  padding: .85rem 1.1rem;
+  font-size: 1rem;
+  border: 1px solid var(--clr-border);
+  border-radius: var(--radius);
+  margin-block-end: 2rem;
+  background: var(--clr-surface);
 }
-#search:focus { outline-color: var(--accent); }
+#search:focus { outline: 2px solid var(--clr-accent); outline-offset: 2px; }
 
 #terimler { list-style: none; margin: 0; padding: 0; }
-#terimler li { padding: .6rem 0; border-bottom: 1px solid #e5e7eb; }
+#terimler li {
+  padding-block: .55rem .55rem;
+  border-bottom: 1px solid var(--clr-border);
+}
 #terimler li:last-child { border-bottom: none; }
 
-/* =========  Term “card”  ========= */
+/* ------------  Term Card  ------------ */
 .term {
-  background: var(--card-bg); border-radius: var(--radius);
-  box-shadow: var(--shadow); padding: 2.5rem 2rem 3rem;
-  margin-block: 4rem; animation: fadeIn .6s ease-out both;
+  background: var(--clr-surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 3rem 2.25rem 3.5rem;
+  margin-block: 4rem;
+  animation: fadeIn .5s ease-out both;
 }
+@keyframes fadeIn { from { opacity: 0; translate: 0 12px; } to { opacity: 1; translate: 0; } }
 
-@keyframes fadeIn { from { opacity: 0; translate: 0 8px; } to { opacity: 1; translate: 0 0; } }
-
-/* bilingual heading block */
+/* bilingual heading */
 .term-heading {
-  background: var(--accent-light); border-radius: var(--radius);
-  padding: 1rem 1.25rem; margin-bottom: 2rem;
-  font-size: 1.1rem; line-height: 1.45;
+  display: grid;
+  gap: .25rem;
+  margin-block-end: 2.25rem;
 }
-.term-heading p { margin: .25rem 0; }
+.term-heading p {
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.45;
+}
 .term-heading strong {
-  display: inline-block; min-width: 4.5rem; color: var(--accent);
+  color: var(--clr-meta);
+  font-weight: 600;
+  margin-inline-end: .4rem;
 }
 
-/* term body */
-.definition{
-    background: var(--accent-light);
-    padding: 1rem;
-}
+/* definition */
+.definition { font-size: 1.05rem; }
 .definition p:first-child { margin-top: 0; }
 .definition a { font-weight: 600; }
 
 /* metadata */
-.meta { margin-top: 2.5rem; font-size: .95rem; color: var(--meta); line-height: 1.45; }
-.meta strong { color: var(--text); }
+.meta {
+  margin-top: 2.75rem;
+  font-size: .95rem;
+  color: var(--clr-meta);
+}
+.meta p { margin: .3rem 0; }
+.meta strong { color: var(--clr-text); }
 
 /* back link */
 .back { margin-top: 0rem; text-align: center; }
 .back a { font-weight: 600; }
 
-/* =========  Dark‑mode  ========= */
+/* ------------  Dark Mode  ------------ */
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #111827;        /* gray‑900 */
-    --card-bg: #1f2937;   /* gray‑800 */
-    --text: #f3f4f6;      /* gray‑100 */
-    --meta: #9ca3af;      /* gray‑400 */
+    --clr-bg:        #111827;  /* gray‑900 */
+    --clr-surface:   #1f2937;  /* gray‑800 */
+    --clr-text:      #f3f4f6;  /* gray‑100 */
+    --clr-meta:      #9ca3af;  /* gray‑400 */
+    --clr-border:    #374151;  /* gray‑700 */
     --shadow: none;
   }
-  #search {
-    background: #111827; border-color: #374151; color: var(--text);
-  }
-  #search::placeholder { color: #6b7280; }
-  a:hover { color: color-mix(in srgb, var(--accent) 85%, white); }
-  #terimler li { border-color: #374151; }
+  #search { background: var(--clr-surface); color: var(--clr-text); }
+  #search::placeholder { color: var(--clr-meta); }
+  a:hover, a:focus-visible { color: var(--clr-accent); }
+  #terimler li { border-color: var(--clr-border); }
 }

@@ -1,11 +1,14 @@
 ---
 layout: term
-title: Dilbirim
+turkish: Dilbirim
 english: Token
 categories:
     - Derin Öğrenme
+    - Büyük Dil Modeli (LLM)
     - Bilgisayar Bilimleri
-similar: [tokenize, tokenization]
+similar: [tokenizer, tokenization]
 ---
 
-"Token", metnin işlenebilir parçalara ayrılmış halidir. Bir token, tek bir kelime, bir karakter veya bir alt kelime parçası olabilir.
+**Açıklama:**
+
+Metnin işlenebilir parçalara ayrılmış halidir. Bir token, tek bir kelime, bir karakter veya bir alt kelime parçası olabilir.

@@ -2,7 +2,10 @@
 <html lang="tr">
     <head>
         <meta charset="utf-8">
-        <title>{{ page.title }}</title>
+        <title>
+            {{ page.english | default: page.title }}
+            {% if page.turkish %} | {{ page.turkish }}{% endif %}
+        </title>
 
         <!-- Global stylesheet -->
         <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
@@ -13,7 +16,7 @@
 
     <body>
         <header>
-            <h2><a href="{{ '/' | relative_url }}">AIML Sözlük</a></h2>
+            <h2><a href="{{ '/' | relative_url }}">Yapay Zeka Sözlük</a></h2>
         </header>
 
         <main>
