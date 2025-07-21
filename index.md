@@ -1,6 +1,34 @@
 ---
-# Feel free to add content and custom Front Matter to this file.
-# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-
-layout: home
+layout: default          # uses _layouts/default.html
+title: Türkçe Yapay Zeka ve Makine Öğrenmesi Sözlüğü
+permalink: /       # final URL → …/sozluk/
 ---
+
+<!-- Search box (client-side filter) -->
+<input id="search" placeholder="Ara…" autofocus>
+
+<ul id="terimler">
+  {%- assign entries = site.terms | sort: "title" -%}
+  {%- for t in entries -%}
+    <li data-title="{{ t.title | downcase }}">
+      <a href="{{ t.url | relative_url }}">{{ t.title }}</a>
+      {%- if t.english -%}
+        <em> ({{ t.english }})</em>
+      {%- endif -%}
+      {%- if t.categories -%}
+        &nbsp;&mdash;&nbsp;<small>{{ t.categories | join: ", " }}</small>
+      {%- endif -%}
+    </li>
+  {%- endfor -%}
+</ul>
+
+<script>
+const box  = document.getElementById('search');
+const rows = [...document.querySelectorAll('#terimler li')];
+box.addEventListener('input', e => {
+  const q = e.target.value.toLowerCase();
+  rows.forEach(li => {
+    li.style.display = li.dataset.title.includes(q) ? '' : 'none';
+  });
+});
+</script>

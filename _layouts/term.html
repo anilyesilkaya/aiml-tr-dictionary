@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<article class="term">
+
+    <!-- big title line -->
+    <h1 class="term-title">
+    {{ page.title }}
+    {% if page.english %}
+        <span class="en">({{ page.english }})</span>
+    {% endif %}
+    </h1>
+
+    <!-- body (your Markdown) -->
+    <section class="definition">
+    {{ content }}
+    </section>
+
+    <!-- optional metadata -->
+    {% if page.categories or page.synonyms %}
+    <footer class="meta">
+        {% if page.categories %}
+        <p><strong>Kategoriler:</strong> {{ page.categories | join: ", " }}</p>
+        {% endif %}
+        {% if page.synonyms %}
+        <p><strong>Eşanlamlılar:</strong> {{ page.synonyms | join: ", " }}</p>
+        {% endif %}
+    </footer>
+    {% endif %}
+
+    <p class="back"><a href="{{ '/sozluk/' | relative_url }}">← Sözlüğe geri dön</a></p>
+</article>

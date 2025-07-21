@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8">
+        <title>{{ page.title }}</title>
+
+        <!-- Global stylesheet -->
+        <link rel="stylesheet" href="{{ '/assets/style.css' | relative_url }}">
+
+        <!-- Optional JS for the filter on sozluk.md -->
+        <!-- <script defer src="{{ '/_assets/script.js' | relative_url }}"></script> -->
+    </head>
+
+    <body>
+        <header>
+            <h2><a href="{{ '/' | relative_url }}">Anasayfa</a></h2>
+        </header>
+
+        <main>
+            {{ content }}
+        </main>
+
+        <footer>
+            <small>© {{ site.time | date: '%Y' }}</small>
+        </footer>
+    </body>
+</html>
