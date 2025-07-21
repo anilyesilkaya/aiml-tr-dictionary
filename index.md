@@ -10,10 +10,12 @@ permalink: /       # final URL → …/sozluk/
 <ul id="terimler">
   {%- assign entries = site.terms | sort: "title" -%}
   {%- for t in entries -%}
-    <li data-title="{{ t.title | downcase }}">
-      <a href="{{ t.url | relative_url }}">{{ t.title }}</a>
-      {%- if t.english -%}
-        <em> ({{ t.english }})</em>
+    <li data-title="{{ t.title | downcase }} {{ t.english | downcase }}">
+      <a href="{{ t.url | relative_url }}">
+        {{ t.english | default: t.title }}      <!-- link shows English first -->
+      </a>
+      {%- if t.english %}
+        <em> ({{ t.title }})</em>              <!-- Turkish in parentheses -->
       {%- endif -%}
       {%- if t.categories -%}
         &nbsp;&mdash;&nbsp;<small>{{ t.categories | join: ", " }}</small>

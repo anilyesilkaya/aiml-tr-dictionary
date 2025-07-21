@@ -1,35 +1,119 @@
-/* ---- term page ---- */
+/* ------------------------------------------------------
+   Modern Minimal Theme  —  AIML TR Dictionary (final)
+   ------------------------------------------------------ */
+
+/* =========  CSS Custom Properties  ========= */
+:root {
+  /* brand */
+  --accent:       #eaffb2;        /* light-yellow */
+  --accent-light: #525166;        /* very pale blue for subtle tints */
+
+  /* greys & text */
+  --text:   #1f2937;  /* gray‑800 */
+  --bg:     #f9fafb;  /* gray‑50  */
+  --card-bg:#ffffff;  /* true white */
+  --meta:   #6b7280;  /* gray‑500 */
+
+  /* layout & motion */
+  --radius:   1rem;
+  --shadow:   0 10px 20px rgba(0,0,0,.04),
+              0  2px  6px rgba(0,0,0,.04);
+  --max-width:   68ch;
+  --line-height: 1.65;
+  --transition:  140ms cubic-bezier(.4,0,.2,1);
+}
+
+/* =========  Reset & Base  ========= */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { font-size: 16px; scroll-behavior: smooth; }
+
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: var(--line-height);
+}
+
+/* =========  Layout wrappers  ========= */
+header, footer, main {
+  width: min(100% - 2rem, var(--max-width));
+  margin-inline: auto;
+}
+
+header { padding-block: 2.5rem 1rem; text-align: center; }
+header h2 { margin: 0; font-size: 1.75rem; letter-spacing: -.02em; font-weight: 700; }
+header a { color: var(--text); text-decoration: none; }
+
+footer {
+  padding-block: 4rem 2rem; text-align: center;
+  font-size: .875rem; color: var(--meta);
+}
+
+/* =========  Links (global)  ========= */
+a { color: var(--accent); text-decoration: none; transition: color var(--transition); }
+a:hover, a:focus-visible { color: color-mix(in srgb, var(--accent) 80%, black); }
+
+/* =========  Dictionary Index  ========= */
+#search {
+  width: 100%; padding: .9rem 1rem; font-size: 1rem;
+  border: 1px solid #d1d5db; /* gray‑300 */
+  border-radius: var(--radius); margin-bottom: 2rem;
+}
+#search:focus { outline-color: var(--accent); }
+
+#terimler { list-style: none; margin: 0; padding: 0; }
+#terimler li { padding: .6rem 0; border-bottom: 1px solid #e5e7eb; }
+#terimler li:last-child { border-bottom: none; }
+
+/* =========  Term “card”  ========= */
 .term {
-    max-width: 60ch;          /* readable line length */
-    margin: 4rem auto;        /* centred block */
-    padding: 0 1rem;
+  background: var(--card-bg); border-radius: var(--radius);
+  box-shadow: var(--shadow); padding: 2.5rem 2rem 3rem;
+  margin-block: 4rem; animation: fadeIn .6s ease-out both;
 }
 
-.term-title {
-    font-size: 2rem;
-    text-align: center;
-    margin: 0 0 1.25rem;
-    line-height: 1.2;
+@keyframes fadeIn { from { opacity: 0; translate: 0 8px; } to { opacity: 1; translate: 0 0; } }
+
+/* bilingual heading block */
+.term-heading {
+  background: var(--accent-light); border-radius: var(--radius);
+  padding: 1rem 1.25rem; margin-bottom: 2rem;
+  font-size: 1.1rem; line-height: 1.45;
+}
+.term-heading p { margin: .25rem 0; }
+.term-heading strong {
+  display: inline-block; min-width: 4.5rem; color: var(--accent);
 }
 
-.term-title .en {
-    font-weight: 400;
-    font-size: 1.25rem;
-    margin-left: .5rem;
-    color: #666;
+/* term body */
+.definition{
+    background: var(--accent-light);
+    padding: 1rem;
 }
+.definition p:first-child { margin-top: 0; }
+.definition a { font-weight: 600; }
 
-.definition {
-    font-size: 1.1rem;
-    line-height: 1.6;
+/* metadata */
+.meta { margin-top: 2.5rem; font-size: .95rem; color: var(--meta); line-height: 1.45; }
+.meta strong { color: var(--text); }
+
+/* back link */
+.back { margin-top: 0rem; text-align: center; }
+.back a { font-weight: 600; }
+
+/* =========  Dark‑mode  ========= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111827;        /* gray‑900 */
+    --card-bg: #1f2937;   /* gray‑800 */
+    --text: #f3f4f6;      /* gray‑100 */
+    --meta: #9ca3af;      /* gray‑400 */
+    --shadow: none;
+  }
+  #search {
+    background: #111827; border-color: #374151; color: var(--text);
+  }
+  #search::placeholder { color: #6b7280; }
+  a:hover { color: color-mix(in srgb, var(--accent) 85%, white); }
+  #terimler li { border-color: #374151; }
 }
-
-.meta {
-    margin-top: 2rem;
-    font-size: .95rem;
-    color: #444;
-}
-
-.meta p { margin: .25rem 0; }
-
-.back   { margin-top: 3rem; text-align: center; }
