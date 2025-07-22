@@ -1,6 +1,5 @@
 /* =====================================================
-   AIML‑TR Dictionary • Slick Minimal 2025 Refresh
-   Author: ChatGPT / OpenAI  •  July 2025
+   AIML‑TR Dictionary
    ===================================================== */
 
 /* ------------  Design Tokens  ------------ */
@@ -11,7 +10,7 @@
   --clr-text:        #1a1d23;      /* primary text */
   --clr-meta:        #6b7280;      /* secondary text */
   --clr-border:      #e5e7eb;      /* subtle borders */
-  --clr-accent:      #e7ffae;      /* brand blue (AA contrast) */
+  --clr-accent:      #ffe343;      /* yellow */
   --clr-accent-dark: #004ed4;      /* hover / active */
 
   /* layout */

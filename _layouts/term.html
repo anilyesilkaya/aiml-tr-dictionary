@@ -34,7 +34,7 @@ layout: default
             {{ t.english | default: t.title }}
           </a>
         {%- else %}
-          {{ s }}                       {# fallback if slug not found #}
+          {{ s }} {# fallback if slug not found #}
         {%- endif -%}
         {%- unless forloop.last %}, {% endunless -%}
       {%- endfor %}

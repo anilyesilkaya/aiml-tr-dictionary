@@ -11,4 +11,4 @@ similar: [token, tokenization]
 
 **Açıklama:**
 
-Bir metni daha küçük anlamlı parçalara (token'lara) ayıran yzilim rutini.
+_İsim._ Bir metni daha küçük anlamlı parçalara (token'lara) ayıran yazılım rutini.

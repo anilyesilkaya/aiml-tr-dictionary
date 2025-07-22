@@ -11,4 +11,4 @@ similar: [tokenizer, tokenization]
 
 **Açıklama:**
 
-Metnin işlenebilir parçalara ayrılmış halidir. Bir token, tek bir kelime, bir karakter veya bir alt kelime parçası olabilir.
+_İsim._ Metnin işlenebilir parçalara ayrılmış halidir. Bir token, tek bir kelime, bir karakter veya bir alt kelime parçası olabilir.
