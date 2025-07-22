@@ -1,6 +1,6 @@
 ---
 layout: term
-turkish: Veribirimleyici
+turkish: Veribirimleyici veya metinbirimleyici
 english: Tokenizer
 categories:
     - Derin Öğrenme
@@ -9,4 +9,4 @@ categories:
 similar: [token, tokenization]
 ---
 
-_İsim._ Bir metni daha küçük, anlamlı parçalara (token'lara) ayıran yazılım rutini. OpenAI firmasının GPT serisi ve en güncel ChatGPT modellerinin veribirimleyici olarak byte-çifti algoritması (BPE) kullandığı bilinmektedir.
+_İsim._ Bir veriyi veya metni, daha küçük ve anlamlı parçalara (token’lara) ayıran yazılım rutini. OpenAI firmasının GPT serisi ve en güncel ChatGPT modellerinin metinbirimleyici olarak byte-çifti algoritmasını (BPE) kullandığı bilinmektedir.

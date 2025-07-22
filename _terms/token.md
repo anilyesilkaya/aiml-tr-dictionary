@@ -1,6 +1,6 @@
 ---
 layout: term
-turkish: Veribirim
+turkish: Veribirim veya Metinbirim
 english: Token
 categories:
     - Derin Öğrenme
@@ -9,4 +9,7 @@ categories:
 similar: [tokenizer, tokenization]
 ---
 
-_İsim._ Verinin (veya büyük dil modellerinde metnin) işlenebilir ve değiştirilebilir bir parçası. Büyük dil modellerinde (LLM) bir harf veya karakter, bir kelime parçası (alt-kelime), bir kelime, bir cümle veya bir paragrafın tümü veya parçası olabilir.
+_İsim._ Verinin (veya büyük dil modellerinde metnin) işlenebilir ve değiştirilebilir bir parçasıdır. Büyük dil modellerinde (LLM), bir token; bir harf veya karakter, bir kelime parçası (alt kelime), bir kelime, bir cümle ya da bir paragrafın tamamı veya bir kısmı olabilir.
+
+**Önemli not:**
+- Genel bilgisayar bilimi uygulamalarında veribirim terimi kullanılırken, büyük dil modelleri (LLM) bağlamında metinbirim terimi tercih edilebilir.
