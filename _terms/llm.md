@@ -6,7 +6,7 @@ categories:
     - Derin Öğrenme
     - Büyük Dil Modelleri (LLM)
     - Bilgisayar Bilimleri
-similar: [chatgpt, gpt, token, tokenizer, tokenization]
+similar: [slm, chatgpt, gpt, token, tokenizer, tokenization]
 ---
 
 _İsim_ — Büyük dil modeli (BDM), insanların kullandığı yazılı metinlerin analizini, başka dillere çevirisini, verilen komutlara göre üretilmesini ve benzeri uygulamaları yapabilen bir yapay zekâ (YZ) modelidir. Büyük dil modelleri terimindeki "büyük" ifadesi, hem bu modellerin içerisindeki öğrenilebilir değişken sayısını hem de veri setinin büyüklüğünü temsil etmektedir. Genellikle öğrenilebilir değişken sayısı milyarlar düzeyindedir. Bu modeller, öğretim işlemi tamamlandıktan sonra çıkarım yapma fazında dahi _programlanabilmektedirler_. Örneğin, ChatGPT modeline keyfi bir metin dönüşümü tanımlayacak olursak, mesela sesli harfleri atıp ters çevirme işlemi:
