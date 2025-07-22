@@ -20,8 +20,11 @@ body {
 }
 
 main, header, footer {
-  width: min(100% - 2rem, var(--maxw));
+  width: 100%;
+  max-width: var(--maxw);
   margin-inline: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 header {
