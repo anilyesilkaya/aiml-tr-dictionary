@@ -9,6 +9,4 @@ categories:
 similar: [tokenizer, tokenization]
 ---
 
-**Açıklama:**
-
 _İsim._ Verinin (veya büyük dil modellerinde metnin) işlenebilir ve değiştirilebilir bir parçası. Büyük dil modellerinde (LLM) bir token, tek bir kelime, bir karakter veya bir alt kelime parçası olabilir.
