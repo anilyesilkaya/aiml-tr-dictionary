@@ -1,6 +1,6 @@
 ---
 layout: term
-turkish: Dilbirim
+turkish: Veribirim
 english: Token
 categories:
     - Derin Öğrenme
@@ -11,4 +11,4 @@ similar: [tokenizer, tokenization]
 
 **Açıklama:**
 
-_İsim._ Metnin işlenebilir parçalara ayrılmış halidir. Bir token, tek bir kelime, bir karakter veya bir alt kelime parçası olabilir.
+_İsim._ Verinin (veya büyük dil modellerinde metnin) işlenebilir ve değiştirilebilir bir parçası. Büyük dil modellerinde (LLM) bir token, tek bir kelime, bir karakter veya bir alt kelime parçası olabilir.

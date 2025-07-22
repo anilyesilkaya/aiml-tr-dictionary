@@ -1,6 +1,6 @@
 ---
 layout: term
-turkish: Dilbirimleme
+turkish: Veribirimleme
 english: Tokenization
 categories:
     - Derin Öğrenme
@@ -11,4 +11,4 @@ similar: [token, tokenizer]
 
 **Açıklama:**
 
-_Fiil._ Bir metni daha küçük anlamlı parçalara (token'lara) ayırma işlemidir. Türkçe'de bu süreç, ekler ve birleşik kelimelerin çokluğu nedeniyle oldukça karmaşıktır.
+_Fiil._ Bir veriyi daha küçük, kullanılabilir parçalara (token'lara) ayırma işlemidir. Büyük dil modellerinde bu işlem; harf, alt-kelime, kelime ve paragraf düzeyinde ayrıştırma ile sonuçlanabilir. Günümüzün modern dil modelleri (mesela ChatGPT) alt-kelime düzeyinde veribirimleme yapmaktadır. Türkçe'de bu süreç, ekler ve birleşik kelimelerin çokluğu nedeniyle oldukça karmaşıktır.
