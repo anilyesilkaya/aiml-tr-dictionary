@@ -27,21 +27,10 @@ permalink: /       # final URL → …/sozluk/
 <script>
 const box  = document.getElementById('search');
 const rows = [...document.querySelectorAll('#terimler li')];
-
 box.addEventListener('input', e => {
-  const q = e.target.value.trim().toLowerCase();
-
-  // If query is empty, show all
-  if (!q) {
-    rows.forEach(li => li.style.display = '');
-    return;
-  }
-
-  // Build a regex with word boundaries and case-insensitive
-  const regex = new RegExp(`\\b${q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}\\b`, 'i');
-
+  const q = e.target.value.toLowerCase();
   rows.forEach(li => {
-    li.style.display = regex.test(li.dataset.title) ? '' : 'none';
+    li.style.display = li.dataset.title.includes(q) ? '' : 'none';
   });
 });
 </script>
