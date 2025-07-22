@@ -44,7 +44,7 @@ header h2 { margin: 0; font-weight: 700; font-size: 1.9rem; letter-spacing: -.01
 header a { color: var(--clr-text); text-decoration: none; }
 
 footer {
-  padding-block: 5rem 2.5rem;
+  padding-block: 0rem 0rem;
   text-align: center;
   font-size: .875rem;
   color: var(--clr-meta);
