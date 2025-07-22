@@ -12,7 +12,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 0.1rem;
   background: var(--bg);
   color: var(--text);
   font-family: system-ui, sans-serif;
@@ -20,6 +20,7 @@ body {
 }
 
 main, header, footer {
+  box-sizing: border-box;
   width: 100%;
   max-width: var(--maxw);
   margin-inline: auto;
@@ -50,12 +51,16 @@ a:hover, a:focus-visible { color: var(--accent-hover); }
 
 #search {
   width: 100%;
+  box-sizing: border-box;
   padding: .85rem 1.1rem;
   font-size: 1rem;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   margin-bottom: 2rem;
   background: var(--surface);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 #search:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
 
