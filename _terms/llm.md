@@ -20,4 +20,4 @@ Yukarıdaki örneğe ChatGPT 4.0 modeli `frz` diyerek doğru cevabı, öğretim 
 
 
 **Önemli not:**
-- İnternetteki bazı sayfalarda _Large Language Model_ terimi _Geniş Dil Modelleri_ olarak çevrilmiştir. Benim kişisel kanım, bu çevirinin teknik olarak yanlış olduğu ve _geniş_ kelimesinin _large_ kelimesi değil, _wide_ kelimesine tekabül ettiğidir. Bu dil işleme bağlamında, modelin veya veri setinin genişliğinden bahsetmek pek anlam ifade etmemektedir.
+- İnternetteki bazı sayfalarda _Large Language Model_ terimi _Geniş Dil Modelleri_ olarak çevrilmiştir. Benim kişisel kanım, bu çevirinin teknik olarak yanlış olduğu ve _geniş_ kelimesinin _large_ kelimesi değil, _wide_ kelimesine tekabül ettiğidir. Dil işleme bağlamında, modelin veya veri setinin genişliğinden ziyade derinliğinden bahsetmenin daha anlamlı olduğunu düşünüyorum.
