@@ -1,13 +1,14 @@
 :root {
-  --bg:      #f7f9fc;
-  --surface: #fff;
-  --text:    #1a1d23;
-  --meta:    #6b7280;
-  --border:  #e5e7eb;
-  --accent:  #ffbb00;
-  --accent-hover: #ffffff;
+  --bg:      #1d2127; /* Darker gray */
+  --surface: #353942; /* Slightly lighter gray */
+  --text:    #e5e5e5; /* Lighter text for better contrast */
+  --meta:    #8b949e; /* Adjusted meta color */
+  --altmeta: #7dcfe3; /* Alternative meta color */
+  --border:  #4b5563; /* Adjusted border color */
+  --accent:  #fcd450; /* Vibrant blue accent */
+  --accent-hover: #c7d2fe; /* Lighter accent on hover */
   --radius:  .9rem;
-  --shadow:  0 3px 6px rgb(0 0 0 / .04), 0 1px 2px rgb(0 0 0 / .06);
+  --shadow:  none;
   --maxw:    72ch;
 }
 
@@ -33,7 +34,7 @@ header {
   text-align: center;
 }
 header h2 { margin: 0; font-size: 1.9rem; font-weight: 700; }
-header a { color: var(--text); text-decoration: none; }
+header a { color: var(--meta); text-decoration: none; }
 
 footer {
   text-align: center;
@@ -58,11 +59,13 @@ a:hover, a:focus-visible { color: var(--accent-hover); }
   border-radius: var(--radius);
   margin-bottom: 2rem;
   background: var(--surface);
+  color: var(--text);
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
 #search:focus { outline: 2px solid var(--accent); outline-offset: 2px; }
+#search::placeholder { color: var(--meta); }
 
 #terimler { list-style: none; margin: 0; padding: 0; }
 #terimler li {
@@ -92,7 +95,7 @@ a:hover, a:focus-visible { color: var(--accent-hover); }
   margin-bottom: 2.25rem;
 }
 .term-heading p { margin: 0; font-size: 1.1rem; }
-.term-heading strong { color: var(--meta); font-weight: 600; margin-right: .4rem; }
+.term-heading strong { color: var(--altmeta); font-weight: 600; margin-right: .4rem; }
 
 .definition { font-size: 1.05rem; }
 .definition p:first-child { margin-top: 0; }
@@ -110,18 +113,3 @@ a:hover, a:focus-visible { color: var(--accent-hover); }
 .back { text-align: center; }
 .back a { color: var(--accent); text-decoration: none; font-weight: 600; }
 .back a:hover { color: var(--accent-hover); }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg:      #111827;
-    --surface: #1f2937;
-    --text:    #f3f4f6;
-    --meta:    #9ca3af;
-    --border:  #374151;
-    --shadow:  none;
-  }
-  #search { background: var(--surface); color: var(--text); }
-  #search::placeholder { color: var(--meta); }
-  a:hover, a:focus-visible { color: var(--accent); }
-  #terimler li { border-color: var(--border); }
-}
