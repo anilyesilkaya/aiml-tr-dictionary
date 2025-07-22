@@ -6,7 +6,7 @@ categories:
     - Derin Öğrenme
     - Büyük Dil Modelleri (LLM)
     - Bilgisayar Bilimleri
-similar: [tokenizer, tokenization]
+similar: [chatgpt, gpt, llm, tokenizer, tokenization]
 ---
 
 _İsim_ — Verinin (veya büyük dil modellerinde metnin) işlenebilir ve değiştirilebilir bir parçasıdır. Büyük dil modellerinde (LLM), bir token; bir harf veya karakter, bir kelime parçası (alt kelime), bir kelime, bir cümle ya da bir paragrafın tamamı veya bir kısmı olabilir.
