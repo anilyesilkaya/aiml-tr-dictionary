@@ -1,6 +1,6 @@
 ---
 layout: term
-turkish: Veribirimleyici veya metinbirimleyici
+turkish: Veribirimleyici veya Metinbirimleyici
 english: Tokenizer
 categories:
     - Derin Öğrenme
